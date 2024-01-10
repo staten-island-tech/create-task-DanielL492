@@ -1,4 +1,4 @@
-import {characters} from "./arr"
+import { characters } from "./arr";
 import { DOMSelectors } from "./dom"
 
 function insert(arr) {
@@ -6,7 +6,7 @@ function insert(arr) {
     `<div class="flexcontainer">
       <div class="card">
         <h4 class="name">${data.name}</h1>
-        <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
+        <img src="${data.img}" alt="Image of ${data.name}" class="card-img"/> <br>
       </div>
     </div>`
 ))}
