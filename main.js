@@ -205,4 +205,20 @@ const characters = [
     },
   ];
   
-export {characters}
+const DOMSelectors = {
+    container: document.getElementById("flexcontainer"),
+}
+
+function insert(arr) {
+    console.log(arr);
+    arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
+    `<div class="flexcontainer">
+      <div class="card">
+        <h4 class="name">${arr.name}</h4>
+      </div>
+    </div>`
+))}
+
+insert(characters);
+
+// <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
