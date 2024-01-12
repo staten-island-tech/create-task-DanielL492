@@ -13,27 +13,27 @@ const characters = [
     },
     {
       name: "Spartan Locke",
-      img: "lock.webp"
+      img: "../img/lock.webp"
     },
     {
       name: "Sgt. Johnson",
-      img: "john.png"
+      img: "../img/john.png"
     },
     {
       name: "Catherine Halsey",
-      img: "halsey.webp"
+      img: "../img/halsey.webp"
     },
     {
       name: "Emile-A239",
-      img: "emile.webp"
+      img: "../img/emile.webp"
     },
     {
       name: "Kat-B320",
-      img: "Kat.webp"
+      img: "../img/Kat.webp"
     },
     {
       name: "Atriox",
-      img: "atriox.webp"
+      img: "../img/atriox.webp"
     },
     {
       name: "343 Guilty Spark",
@@ -45,23 +45,23 @@ const characters = [
     },
     {
       name: "Kelly-087",
-      img: "kelly.png"
+      img: "../img/kelly.png"
     },
     {
       name: "Linda-058",
-      img: "linda.webp"
+      img: "../img/linda.webp"
     },
     {
       name: "Fred-104",
-      img: "fred.webp"
+      img: "../img/fred.webp"
     },
     {
       name: "Commander Sarah Palmer",
-      img: "palmer.webp"
+      img: "../img/palmer.webp"
     },
     {
       name: "Roland",
-      img: "roland.webp"
+      img: "../img/roland.webp"
     },
     {
       name: "Gabriel Thorne",
@@ -69,11 +69,11 @@ const characters = [
     },
     {
       name: "Jorge-052",
-      img: "Jorge.webp"
+      img: "../img/Jorge.webp"
     },
     {
       name: "Edward Buck",
-      img: "buck.webp"
+      img: "../img/buck.webp"
     },
     {
       name: "Covenant Elite",
@@ -81,7 +81,7 @@ const characters = [
     },
     {
       name: "Didact",
-      img: "didact.webp"
+      img: "../img/didact.webp"
     },
     {
       name: "Covenant Grunt",
@@ -89,23 +89,23 @@ const characters = [
     },
     {
       name: "Covenant Hunter",
-      img: "hunter.webp"
+      img: "../img/hunter.webp"
     },
     {
       name: "Covenant Jackal",
-      img: "jackal.webp"
+      img: "../img/jackal.webp"
     },
     {
       name: "Covenant Jiralhanae",
-      img: "brute.webp"
+      img: "../img/brute.webp"
     },
     {
       name: "Spartan Jun-A266",
-      img: "Jun.webp"
+      img: "../img/Jun.webp"
     },
     {
       name: "Spartan Carter-A259",
-      img: "Carter.webp"
+      img: "../img/Carter.webp"
     },
     {
       name: "Spartan Thom-A293",
@@ -113,7 +113,7 @@ const characters = [
     },
     {
       name: "Captain Jacob Keyes",
-      img: "keyes.webp"
+      img: "../img/keyes.webp"
     },
     {
       name: "Miranda Keyes",
@@ -121,7 +121,7 @@ const characters = [
     },
     {
       name: "Shipmaster Rtas 'Vadum",
-      img: "shipmaster.webp"
+      img: "../img/shipmaster.webp"
     },
     {
       name: "Tartarus",
@@ -137,11 +137,11 @@ const characters = [
     },
     {
       name: "Olympia Vale",
-      img: "vale.webp"
+      img: "../img/vale.webp"
     },
     {
       name: "Holly Tanaka",
-      img: "tanaka.webp"
+      img: "../img/tanaka.webp"
     },
   ];
   
