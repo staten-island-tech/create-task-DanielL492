@@ -44,10 +44,6 @@ const characters = [
       img: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/99f331d8-fc33-4708-bd19-09293f4e4196/de3ip6k-58745836-63e9-4a35-a896-db319c2b9c20.png/v1/fill/w_670,h_1192/prophet_of_truth_h2a_render_by_monkeyrebel117_de3ip6k-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODE5MiIsInBhdGgiOiJcL2ZcLzk5ZjMzMWQ4LWZjMzMtNDcwOC1iZDE5LTA5MjkzZjRlNDE5NlwvZGUzaXA2ay01ODc0NTgzNi02M2U5LTRhMzUtYTg5Ni1kYjMxOWMyYjljMjAucG5nIiwid2lkdGgiOiI8PTQ2MDgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.nRJ8Hl6wVfNh0ex4cJAhAlv6W98WwTMPD--bUjJXy24"
     },
     {
-      name: "Kilo-Five",
-      img: "https://halo.wiki.gallery/images/thumb/2/25/HM-K5-2.JPG/1200px-HM-K5-2.JPG"
-    },
-    {
       name: "Kelly-087",
       img: "https://static.wikia.nocookie.net/halo/images/1/13/H5G_Render_Kelly-FullBody.png/revision/latest/scale-to-width-down/250?cb=20150615230509"
     },
@@ -117,69 +113,36 @@ const characters = [
     },
     {
       name: "Captain Jacob Keyes",
-      img: ""
+      img: "https://static.wikia.nocookie.net/halo/images/e/e7/CaptainKeyesOld.png/revision/latest?cb=20190821220025"
     },
     {
       name: "Miranda Keyes",
-      img: ""
+      img: "https://vignette3.wikia.nocookie.net/halo/images/a/a0/Miranda_Keys_H3.png/revision/latest?cb=20130626062157"
     },
     {
-      name: "Covenant Prophet",
-      img: ""
-    },
-    {
-      name: "Forerunner Monitor",
-      img: ""
-    },
-    {
-      name: "Arbiter Rtas 'Vadum",
-      img: ""
+      name: "Shipmaster Rtas 'Vadum",
+      img: "https://static.wikia.nocookie.net/inconsistently-admirable/images/c/c5/H2A_Rtas-Ingame.png/revision/latest?cb=20231024151139"
     },
     {
       name: "Tartarus",
-      img: ""
-    },
-    {
-      name: "Isaac Hannaford",
-      img: ""
-    },
-    {
-      name: "John Forge",
-      img: ""
+      img: "https://www.giantbomb.com/a/uploads/scale_small/0/118/607279-tartarusfull.jpg"
     },
     {
       name: "Serina",
-      img: ""
+      img: "https://halo.wiki.gallery/images/thumb/1/13/HW2_Render_Serina-FullBody.png/300px-HW2_Render_Serina-FullBody.png"
     },
     {
       name: "Professor Ellen Anders",
-      img: ""
+      img: "https://halo.wiki.gallery/images/3/36/HW2_Anders.png"
     },
-    {
-      name: "Jai-006",
-      img: ""
-    },
-
     {
       name: "Olympia Vale",
-      img: ""
-    },
-    {
-      name: "Edward Buck",
-      img: ""
+      img: "https://static.wikia.nocookie.net/marvelcrossroads/images/a/a0/Olympia_Vale.png/revision/latest?cb=20220312234338"
     },
     {
       name: "Holly Tanaka",
-      img: ""
+      img: "https://static.wikia.nocookie.net/halo/images/0/08/H5G_Render_Tanaka-FullBody.png/revision/latest/scale-to-width-down/250?cb=20150615225658"
     },
-    {
-      name: "Fireteam Osiris",
-      img: ""
-    },
-    {
-      name: "Fireteam Majestic",
-      img: ""
-    }
   ];
   
 const DOMSelectors = {
