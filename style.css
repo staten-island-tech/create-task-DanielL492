@@ -12,7 +12,7 @@
     flex-direction: column;
     background-color: rgba(110, 110, 241, 0.774);
     width: 15vw;
-    height: 40vh;
+    height: 60vh;
     font-size: 1rem;
     border-radius: 15px;
     padding-bottom: 3vh;
@@ -22,7 +22,7 @@
    
    .card-img {
     align-items: center;
-    width: 45%;
-    height: 50%;
+    width: 50%;
+    height: 55%;
    }
    
