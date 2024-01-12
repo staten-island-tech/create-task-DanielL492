@@ -13,27 +13,27 @@ const characters = [
     },
     {
       name: "Spartan Locke",
-      img: "https://static.wikia.nocookie.net/vsbattles/images/a/a7/Halo_Locke_in_action_%28Render%29.png/revision/latest?cb=20180924132902"
+      img: "lock.webp"
     },
     {
       name: "Sgt. Johnson",
-      img: "https://static.wikia.nocookie.net/halo/images/c/c4/Halo3_ODST_Sgt._Johnson.png/revision/latest/scale-to-width-down/225?cb=20130626071547"
+      img: "john.png"
     },
     {
       name: "Catherine Halsey",
-      img: "https://static.wikia.nocookie.net/halo/images/4/4f/H5G_Render_Halsey-FullBody.png/revision/latest?cb=20150618063412"
+      img: "halsey.webp"
     },
     {
       name: "Emile-A239",
-      img: "https://static.wikia.nocookie.net/halo/images/0/05/Emile_HR.png/revision/latest/scale-to-width-down/250?cb=20120625132440"
+      img: "emile.webp"
     },
     {
       name: "Kat-B320",
-      img: "https://static.wikia.nocookie.net/halo/images/2/2a/HReach_-_B320.png/revision/latest/scale-to-width-down/223?cb=20131112221504"
+      img: "Kat.webp"
     },
     {
       name: "Atriox",
-      img: "https://static.wikia.nocookie.net/villains/images/a/ab/HW2_Atriox.png/revision/latest?cb=20230824061342"
+      img: "atriox.webp"
     },
     {
       name: "343 Guilty Spark",
@@ -45,23 +45,23 @@ const characters = [
     },
     {
       name: "Kelly-087",
-      img: "https://static.wikia.nocookie.net/halo/images/1/13/H5G_Render_Kelly-FullBody.png/revision/latest/scale-to-width-down/250?cb=20150615230509"
+      img: "kelly.png"
     },
     {
       name: "Linda-058",
-      img: "https://static.wikia.nocookie.net/vsbattles/images/4/48/Linda-058_Render.png/revision/latest?cb=20180312030738"
+      img: "linda.webp"
     },
     {
       name: "Fred-104",
-      img: "https://static.wikia.nocookie.net/p__/images/0/0a/H5G_Render_Fred-FullBody.png/revision/latest?cb=20200924233337&path-prefix=protagonist"
+      img: "fred.webp"
     },
     {
       name: "Commander Sarah Palmer",
-      img: "https://static.wikia.nocookie.net/halo/images/a/a8/H4_palmer2.png/revision/latest/scale-to-width-down/250?cb=20130912121136"
+      img: "palmer.webp"
     },
     {
       name: "Roland",
-      img: "https://static.wikia.nocookie.net/halo/images/b/bf/H4-Roland-Avatar-ScanRender.png/revision/latest/scale-to-width-down/246?cb=20140204122629"
+      img: "roland.webp"
     },
     {
       name: "Gabriel Thorne",
@@ -69,11 +69,11 @@ const characters = [
     },
     {
       name: "Jorge-052",
-      img: "https://static.wikia.nocookie.net/halo/images/0/0e/Jorge.png/revision/latest/scale-to-width-down/250?cb=20131112222323"
+      img: "Jorge.webp"
     },
     {
       name: "Edward Buck",
-      img: "https://static.wikia.nocookie.net/halo/images/9/95/H5G_Render_Buck-FullBody.png/revision/latest/scale-to-width-down/202?cb=20150615222751"
+      img: "buck.webp"
     },
     {
       name: "Covenant Elite",
@@ -81,7 +81,7 @@ const characters = [
     },
     {
       name: "Didact",
-      img: "https://static.wikia.nocookie.net/villains/images/1/1e/Didact_Render.png/revision/latest?cb=20230730183310"
+      img: "didact.webp"
     },
     {
       name: "Covenant Grunt",
@@ -89,23 +89,23 @@ const characters = [
     },
     {
       name: "Covenant Hunter",
-      img: "https://static.wikia.nocookie.net/halo/images/e/e4/H5G_Render_Mgalekgolo.png/revision/latest?cb=20160708135528"
+      img: "hunter.webp"
     },
     {
       name: "Covenant Jackal",
-      img: "https://static.wikia.nocookie.net/halo/images/2/25/H5G_Render_JackalMinor.png/revision/latest?cb=20151023103759"
+      img: "jackal.webp"
     },
     {
       name: "Covenant Jiralhanae",
-      img: "https://static.wikia.nocookie.net/halo/images/2/2b/H2A_Render_Jiralhanae.png/revision/latest?cb=20160403044401"
+      img: "brute.webp"
     },
     {
       name: "Spartan Jun-A266",
-      img: "https://static.wikia.nocookie.net/halo/images/d/d2/Jun.png/revision/latest/scale-to-width-down/250?cb=20130728030014"
+      img: "Jun.webp"
     },
     {
       name: "Spartan Carter-A259",
-      img: "https://static.wikia.nocookie.net/halo/images/9/92/Carter.png/revision/latest/scale-to-width-down/250?cb=20131112220842"
+      img: "Carter.webp"
     },
     {
       name: "Spartan Thom-A293",
@@ -113,7 +113,7 @@ const characters = [
     },
     {
       name: "Captain Jacob Keyes",
-      img: "https://static.wikia.nocookie.net/halo/images/e/e7/CaptainKeyesOld.png/revision/latest?cb=20190821220025"
+      img: "keyes.webp"
     },
     {
       name: "Miranda Keyes",
@@ -121,7 +121,7 @@ const characters = [
     },
     {
       name: "Shipmaster Rtas 'Vadum",
-      img: "https://static.wikia.nocookie.net/inconsistently-admirable/images/c/c5/H2A_Rtas-Ingame.png/revision/latest?cb=20231024151139"
+      img: "shipmaster.webp"
     },
     {
       name: "Tartarus",
@@ -137,11 +137,11 @@ const characters = [
     },
     {
       name: "Olympia Vale",
-      img: "https://static.wikia.nocookie.net/marvelcrossroads/images/a/a0/Olympia_Vale.png/revision/latest?cb=20220312234338"
+      img: "vale.webp"
     },
     {
       name: "Holly Tanaka",
-      img: "https://static.wikia.nocookie.net/halo/images/0/08/H5G_Render_Tanaka-FullBody.png/revision/latest/scale-to-width-down/250?cb=20150615225658"
+      img: "tanaka.webp"
     },
   ];
   
@@ -155,10 +155,10 @@ function insert(arr) {
     `<div class="flexcontainer">
       <div class="card">
         <h4 class="name">${arr.name}</h4>
+        <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
       </div>
     </div>`
 ))}
 
 insert(characters);
 
-// <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
