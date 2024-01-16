@@ -149,23 +149,45 @@ const characters = [
   
 const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
+    form: document.getElementById("submit"),
 }
 
-function insert(arr) {
+function clearcards() {
+  const card = document.querySelectorAll(".card");
+  card.forEach((name) => name.remove());
+ };
+
+function insertimg(arr) {
     console.log(arr);
     arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
     `<div class="flexcontainer">
       <div class="card">
-        <h6 class="name">${arr.name}</h6>
         <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
       </div>
     </div>`
 ))}
 
-insert(characters);
+function inserttext(arr) {
+  console.log(arr);
+  arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
+  `<h6 class="name">${arr.name}</h6>`
+))}
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); 
 }
+
+DOMSelectors.form.addEventListener("click", function (event){
+  event.preventDefault();
+  clearcards();
+  const randtext = getRandomInt(1, 36)
+  const rand1 = getRandomInt(1, 36)
+  const rand2 = getRandomInt(1, 36)
+  const rand3 = getRandomInt(1, 36)
+  let newtext = characters.filter((arr.num) == randtext);
+  inserttext(newtext)
+  let newarr1 = characters.filter((arr.num) == rand1);
+  insertimg(newarr1)
+})
