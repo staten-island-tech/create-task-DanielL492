@@ -150,19 +150,20 @@ const characters = [
 const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     form: document.getElementById("submit"),
+    answer: document.getElementById("answer")
 }
 
 function clearcards() {
-  const card = document.querySelectorAll(".card");
-  card.forEach((name) => name.remove());
+  DOMSelectors.container.textContent = "";
  };
 
 function insertimg(arr) {
     console.log(arr);
     arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
     `<div class="flexcontainer">
-      <div class="card">
+      <div class="card" id="${arr.num}">
         <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
+        <input type="submit" value="Click" id="answer">
       </div>
     </div>`
 ))}
@@ -170,7 +171,11 @@ function insertimg(arr) {
 function inserttext(arr) {
   console.log(arr);
   arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
-  `<h6 class="name">${arr.name}</h6>`
+  `<div class="flexcontainer">
+  <div class="card" id="${arr.num}">
+  <h6 class="name">${arr.name}</h6>
+  </div>
+  </div>`
 ))}
 
 function getRandomInt(min, max) {
@@ -179,15 +184,22 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); 
 }
 
-DOMSelectors.form.addEventListener("click", function (event){
-  event.preventDefault();
+/*DOMSelectors.answer.addEventListener("click", function() {
   clearcards();
-  const randtext = getRandomInt(1, 36)
-  const rand1 = getRandomInt(1, 36)
-  const rand2 = getRandomInt(1, 36)
-  const rand3 = getRandomInt(1, 36)
-  let newtext = characters.filter((arr.num) == randtext);
+  if document.querySelector.card
+})*/
+
+DOMSelectors.form.addEventListener("click", function (){
+  //event.preventDefault();
+  clearcards();
+  let randtext = getRandomInt(1, 36)
+  let rand2 = getRandomInt(1, 36)
+  let rand3 = getRandomInt(1, 36)
+  let newtext = characters.filter((arr) => arr.num == randtext);
   inserttext(newtext)
-  let newarr1 = characters.filter((arr.num) == rand1);
-  insertimg(newarr1)
+  insertimg(newtext)
+  let newarr2 = characters.filter((arr) => arr.num == rand2);
+  insertimg(newarr2)
+  let newarr3 = characters.filter((arr) => arr.num == rand3);
+  insertimg(newarr3)
 })
