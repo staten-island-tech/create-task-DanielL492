@@ -150,7 +150,6 @@ const characters = [
 const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     form: document.getElementById("submit"),
-    answer: document.getElementById("answer")
 }
 
 function clearcards() {
@@ -163,7 +162,7 @@ function insertimg(arr) {
     `<div class="flexcontainer">
       <div class="card" id="${arr.num}">
         <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
-        <input type="submit" value="Click" id="answer">
+        <button type="button" id="answer">Answer</button>
       </div>
     </div>`
 ))}
@@ -175,8 +174,9 @@ function inserttext(arr) {
   <div class="card" id="${arr.num}">
   <h6 class="name">${arr.name}</h6>
   </div>
-  </div>`
-))}
+  </div>`))
+  return arr;
+} 
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -184,12 +184,21 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); 
 }
 
-/*DOMSelectors.answer.addEventListener("click", function() {
-  clearcards();
-  if document.querySelector.card
-})*/
+function ifyiauf () {
+  let randtext = getRandomInt(1, 36)
+  let rand2 = getRandomInt(1, 36)
+  let rand3 = getRandomInt(1, 36)
+  let newtext = characters.filter((arr) => arr.num == randtext);
+  const hi = newtext
+  const hello = newtext
+  let newarr2 = characters.filter((arr) => arr.num == rand2);
+  const hello2 = newarr2
+  let newarr3 = characters.filter((arr) => arr.num == rand3);
+  const hello3 = newarr3
+  return (hi);
+ }
 
-DOMSelectors.form.addEventListener("click", function (){
+ DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
   let randtext = getRandomInt(1, 36)
@@ -197,9 +206,22 @@ DOMSelectors.form.addEventListener("click", function (){
   let rand3 = getRandomInt(1, 36)
   let newtext = characters.filter((arr) => arr.num == randtext);
   inserttext(newtext)
-  insertimg(newtext)
+  const hello = insertimg(newtext)
   let newarr2 = characters.filter((arr) => arr.num == rand2);
-  insertimg(newarr2)
+  const hello2 = insertimg(newarr2)
   let newarr3 = characters.filter((arr) => arr.num == rand3);
-  insertimg(newarr3)
+  const hello3 = insertimg(newarr3)
+})
+
+DOMSelectors.form.addEventListener("click", function () {
+  document.getElementById("answer").addEventListener("click", function(arr) {
+    clearcards();
+    ifyiauf();
+    if (arr.num == ifyiauf().num) {
+      document.querySelector('.h33') == "Yes, you got that correct!"
+    }
+    else {
+      document.querySelector('.h33') == "Wrong. Get better."
+    }
+  })
 })
