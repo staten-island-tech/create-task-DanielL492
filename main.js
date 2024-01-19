@@ -218,10 +218,12 @@ DOMSelectors.form.addEventListener("click", function () {
     clearcards();
     ifyiauf();
     if (arr.num == ifyiauf().num) {
-      document.querySelector('.h33') == "Yes, you got that correct!"
+      document.querySelector('#h33') == "Yes, you got that correct!"
+      console.log("hi")
     }
-    else {
-      document.querySelector('.h33') == "Wrong. Get better."
+    else if (arr.num != ifyiauf().num) {
+      document.querySelector('#h33') == "Wrong. Get better."
+      console.log("no")
     }
   })
 })
