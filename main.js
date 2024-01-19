@@ -201,6 +201,7 @@ function ifyiauf () {
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
+  document.querySelector('#h33').textContent = ""
   let randtext = getRandomInt(1, 36)
   let rand2 = getRandomInt(1, 36)
   let rand3 = getRandomInt(1, 36)
@@ -218,11 +219,11 @@ DOMSelectors.form.addEventListener("click", function () {
     clearcards();
     ifyiauf();
     if (arr.num == ifyiauf().num) {
-      document.querySelector('#h33') == "Yes, you got that correct!"
+      document.querySelector('#h33').textContent = "Yes, you got that correct!"
       console.log("hi")
     }
-    else if (arr.num != ifyiauf().num) {
-      document.querySelector('#h33') == "Wrong. Get better."
+    else {
+      document.querySelector('#h33').textContent = "Wrong. Get better."
       console.log("no")
     }
   })
