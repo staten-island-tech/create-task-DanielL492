@@ -186,16 +186,13 @@ function getRandomInt(min, max) {
 
 function ifyiauf () {
   let randtext = getRandomInt(1, 36)
-  let rand2 = getRandomInt(1, 36)
-  let rand3 = getRandomInt(1, 36)
   let newtext = characters.filter((arr) => arr.num == randtext);
   const hi = newtext
-  const hello = newtext
-  let newarr2 = characters.filter((arr) => arr.num == rand2);
-  const hello2 = newarr2
-  let newarr3 = characters.filter((arr) => arr.num == rand3);
-  const hello3 = newarr3
   return (hi);
+  //let newarr2 = characters.filter((arr) => arr.num == rand2);
+  // let newarr3 = characters.filter((arr) => arr.num == rand3);
+  //let rand2 = getRandomInt(1, 36)
+  //let rand3 = getRandomInt(1, 36)
  }
 
  DOMSelectors.form.addEventListener("click", function (){
@@ -212,6 +209,7 @@ function ifyiauf () {
   const hello2 = insertimg(newarr2)
   let newarr3 = characters.filter((arr) => arr.num == rand3);
   const hello3 = insertimg(newarr3)
+  
 })
 
 DOMSelectors.form.addEventListener("click", function () {
