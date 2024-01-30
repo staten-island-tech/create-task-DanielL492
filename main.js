@@ -150,6 +150,7 @@ const characters = [
 const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     form: document.getElementById("submit"),
+    answer: document.getElementById("answer"),
 }
 
 function clearcards() {
@@ -184,6 +185,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); 
 }
 
+const randtext = getRandomInt(1, 36)
+const new1 = characters[randtext];
+console.log("This is" + new1.name)
+
 function ifyiauf () {
   let randtext = getRandomInt(1, 36)
   let newtext = characters.filter((arr) => arr.num == randtext);
@@ -195,24 +200,35 @@ function ifyiauf () {
   //let rand3 = getRandomInt(1, 36)
  }
 
+let history = [];
+
+function pick(arr) {
+  let randtext = getRandomInt(1, 36)
+  let rand2 = getRandomInt(1, 36)
+  let rand3 = getRandomInt(1, 36)
+  let newtext = arr[randtext];
+  let newtex = arr.filter((arr.num) == randtext);
+  inserttext(newtex)
+  history.push(newtext.name);
+  let newarr22 = arr.filter((arr.num) == rand2);
+  let newarr2 = arr[rand2];
+  insertimg(newarr22)
+  history.push(newarr2.name)
+  let newarr33 = arr.filter((arr.num) == rand3);
+  let newarr3 = arr[rand3];
+  insertimg(newarr33)
+  history.push(newarr3);
+  console.log(history)
+}  
+
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
   document.querySelector('#h33').textContent = " "
-  let randtext = getRandomInt(1, 36)
-  let rand2 = getRandomInt(1, 36)
-  let rand3 = getRandomInt(1, 36)
-  let newtext = characters.filter((arr) => arr.num == randtext);
-  inserttext(newtext)
-  const hello = insertimg(newtext)
-  let newarr2 = characters.filter((arr) => arr.num == rand2);
-  const hello2 = insertimg(newarr2)
-  let newarr3 = characters.filter((arr) => arr.num == rand3);
-  const hello3 = insertimg(newarr3)
-  
+  pick(characters)
 })
 
-DOMSelectors.form.addEventListener("click", function () {
+DOMSelectors.answer.addEventListener("click", function () {
   document.getElementById("answer").addEventListener("click", function(arr) {
     clearcards();
     ifyiauf();
