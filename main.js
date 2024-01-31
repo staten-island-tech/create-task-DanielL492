@@ -221,30 +221,29 @@ function pick(arr) {
   insertimg(newarr3)
   history.push(newarr3);
   console.log(history);
-  let hello = newtext.name;
-  wait.push(hello);
-  return(hello);
+  wait.push(newtext.num);
 }  
 
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
   document.querySelector('#h33').textContent = " "
-  pick(characters)
+  pick(characters);
+  DOMSelectors.answer.addEventListener("click", function () {
+    /*document.getElementById("answer").addEventListener("click", function(arr) {*/
+      clearcards();
+      if (arr.num == wait[0]) {
+        document.querySelector('#h33').textContent = "Yes, you got that correct!"
+        console.log("hi")
+      }
+      else if (arr.num != wait[0]) {
+        document.querySelector('#h33').textContent = "Wrong. Get better."
+        console.log("no")
+      }
+    })
 })
 
-console.log(wait[0])
 
-DOMSelectors.answer.addEventListener("click", function () {
-  /*document.getElementById("answer").addEventListener("click", function(arr) {*/
-    clearcards();
-    if (arr.num == wait[0]) {
-      document.querySelector('#h33').textContent = "Yes, you got that correct!"
-      console.log("hi")
-    }
-    else if (arr.num != wait[0]) {
-      document.querySelector('#h33').textContent = "Wrong. Get better."
-      console.log("no")
-    }
-  })
+
+
 //})
