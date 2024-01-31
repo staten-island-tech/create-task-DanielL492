@@ -159,23 +159,23 @@ function clearcards() {
 
 function insertimg(arr) {
     console.log(arr);
-    arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
+    /*arr.forEach((arr) =>*/ DOMSelectors.container.insertAdjacentHTML("beforeend",
     `<div class="flexcontainer">
       <div class="card" id="${arr.num}">
         <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
         <button type="button" id="answer">Answer</button>
       </div>
     </div>`
-))}
+  )}
 
 function inserttext(arr) {
   console.log(arr);
-  arr.forEach((arr) => DOMSelectors.container.insertAdjacentHTML("beforeend",
+  /*arr.forEach((arr) =>*/ DOMSelectors.container.insertAdjacentHTML("beforeend",
   `<div class="flexcontainer">
   <div class="card" id="${arr.num}">
   <h6 class="name">${arr.name}</h6>
   </div>
-  </div>`))
+  </div>`)
   return arr;
 } 
 
@@ -189,7 +189,7 @@ const randtext = getRandomInt(1, 36)
 const new1 = characters[randtext];
 console.log("This is" + new1.name)
 
-function ifyiauf () {
+/*function ifyiauf () {
   let randtext = getRandomInt(1, 36)
   let newtext = characters.filter((arr) => arr.num == randtext);
   const hi = newtext
@@ -198,27 +198,32 @@ function ifyiauf () {
   // let newarr3 = characters.filter((arr) => arr.num == rand3);
   //let rand2 = getRandomInt(1, 36)
   //let rand3 = getRandomInt(1, 36)
- }
+ }*/
 
-let history = [];
+ let history = [];
+let wait = [];
 
 function pick(arr) {
   let randtext = getRandomInt(1, 36)
   let rand2 = getRandomInt(1, 36)
   let rand3 = getRandomInt(1, 36)
   let newtext = arr[randtext];
-  let newtex = arr.filter((arr.num) == randtext);
-  inserttext(newtex)
+  //let newtex = newtext.filter((newtext.num) == randtext);
+  inserttext(newtext)
+  insertimg(newtext)
   history.push(newtext.name);
-  let newarr22 = arr.filter((arr.num) == rand2);
   let newarr2 = arr[rand2];
-  insertimg(newarr22)
+  //let newarr22 = newarr2.filter((newarr2.num) == rand2);
+  insertimg(newarr2)
   history.push(newarr2.name)
-  let newarr33 = arr.filter((arr.num) == rand3);
   let newarr3 = arr[rand3];
-  insertimg(newarr33)
+  //let newarr33 = newarr3.filter((newarr3.num) == rand3);
+  insertimg(newarr3)
   history.push(newarr3);
-  console.log(history)
+  console.log(history);
+  let hello = newtext.name;
+  wait.push(hello);
+  return(hello);
 }  
 
  DOMSelectors.form.addEventListener("click", function (){
@@ -228,17 +233,18 @@ function pick(arr) {
   pick(characters)
 })
 
+console.log(wait[0])
+
 DOMSelectors.answer.addEventListener("click", function () {
-  document.getElementById("answer").addEventListener("click", function(arr) {
+  /*document.getElementById("answer").addEventListener("click", function(arr) {*/
     clearcards();
-    ifyiauf();
-    if (arr.num == ifyiauf().num) {
+    if (arr.num == wait[0]) {
       document.querySelector('#h33').textContent = "Yes, you got that correct!"
       console.log("hi")
     }
-    else if (arr.num != ifyiauf().num) {
+    else if (arr.num != wait[0]) {
       document.querySelector('#h33').textContent = "Wrong. Get better."
       console.log("no")
     }
   })
-})
+//})
