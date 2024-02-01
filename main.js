@@ -225,16 +225,13 @@ function pick(arr) {
   return(hi);
 }  
 
-function change() {
-  DOMSelectors.answer.setAttribute('value',`${document.getElementById("answer")}`)
-}
 
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
-  change();
+  DOMSelectors.answer.setAttribute(`value`,`${document.getElementById("answer")}`)
   DOMSelectors.answer.addEventListener("click", function () {
     //document.getElementById("answer").addEventListener("click", function(arr) {
       clearcards();
