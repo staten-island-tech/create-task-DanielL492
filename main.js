@@ -150,7 +150,7 @@ const characters = [
 const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     form: document.getElementById("submit"),
-    answer: document.getElementById("answer"),
+    answer: 0, //change value later on in code
 }
 
 function clearcards() {
@@ -221,16 +221,22 @@ function pick(arr) {
   insertimg(newarr3)
   history.push(newarr3);
   console.log(history);
-  wait.push(newtext.num);
+  let hi = newtext.num;
+  return(hi);
 }  
+
+function change() {
+  DOMSelectors.answer.setAttribute('value',`${document.getElementById("answer")}`)
+}
 
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
+  change();
   DOMSelectors.answer.addEventListener("click", function () {
-    /*document.getElementById("answer").addEventListener("click", function(arr) {*/
+    //document.getElementById("answer").addEventListener("click", function(arr) {
       clearcards();
       if (arr.num == wait[0]) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
@@ -240,10 +246,8 @@ function pick(arr) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log("no")
       }
-    })
-})
-
-
-
-
+    })})
+  
 //})
+
+//console.log(hi)
