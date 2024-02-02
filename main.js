@@ -146,18 +146,14 @@ const characters = [
       img: "../img/tanaka.webp"
       ,num:36,},
   ];
-  
-const DOMSelectors = {
+
+  const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     form: document.getElementById("submit"),
-    answer: 0, //change value later on in code
-}
+    answer: document.getElementById("answer"), 
+  }
 
-function clearcards() {
-  DOMSelectors.container.textContent = "";
- };
-
-function insertimg(arr) {
+  function insertimg(arr) {
     console.log(arr);
     /*arr.forEach((arr) =>*/ DOMSelectors.container.insertAdjacentHTML("beforeend",
     `<div class="flexcontainer">
@@ -225,15 +221,22 @@ function pick(arr) {
   return(hi);
 }  
 
+  pick(characters);
+
+function clearcards() {
+  DOMSelectors.container.textContent = "";
+ };
+
+
+
 
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
-  DOMSelectors.answer.setAttribute(`value`,`${document.getElementById("answer")}`)
   DOMSelectors.answer.addEventListener("click", function () {
-    //document.getElementById("answer").addEventListener("click", function(arr) {
+    document.getElementById("answer").addEventListener("click", function(arr) {
       clearcards();
       if (arr.num == wait[0]) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
@@ -244,7 +247,8 @@ function pick(arr) {
         console.log("no")
       }
     })})
-  
-//})
+})
+
+
 
 //console.log(hi)
