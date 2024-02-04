@@ -41,3 +41,35 @@
     margin-top: 5vh;
 }
    
+@media screen and (max-width: 800px) {
+    .card {
+      width: 75%;
+      margin: 5.5vh;
+      height: 50%;
+    }
+    .card1 {
+        width: 75%;
+        margin: 5.5vh;
+        height: 50%;
+    }
+    .title {
+      font-size: 1.3rem;
+    }
+   }
+   
+   
+   @media screen and (max-width: 1200px) and (min-width: 801px) {
+    .card {
+      width: 80%;
+      margin: 6.5vh;
+      height: 60%;
+    }
+    .card1 {
+        width: 80%;
+        margin: 6.5vh;
+        height: 60%;
+    }
+    .title {
+      font-size: 2rem;
+    }
+   }
