@@ -236,16 +236,17 @@ function clearcards() {
   document.querySelector('#h33').textContent = " "
   pick(characters);
   DOMSelectors.answer = document.getElementById("answer")
+  console.log(DOMSelectors.answer)
   DOMSelectors.answer.addEventListener("click", function () {
     document.getElementById("answer").addEventListener("click", function(arr) {
-      if (arr.id == hi) {
+      if (/*(INSERT PARENT ID OF THE BUTTON HERE)*/arr.num == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
         DOMSelectors.answer = document.getElementById("hello")
         console.log(arr.id)
         clearcards();
       }
-      else if (arr.id != hi) {
+      else if (/*INSERT PARENT ID OF THE BUTTON HERE*/ arr.num != hi) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log("no")
         DOMSelectors.answer = document.getElementById("hello")
