@@ -192,7 +192,7 @@ function getRandomInt(min, max) {
   //let rand3 = getRandomInt(1, 36)
  }*/
 
- let history = [];
+let history = [];
 let wait = [];
 
 let hi = 0;
@@ -223,9 +223,6 @@ function pick(arr) {
 function clearcards() {
   DOMSelectors.container.textContent = "";
  };
-
-
-
 
  DOMSelectors.form.addEventListener("click", function (){
   //event.preventDefault();
