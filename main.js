@@ -150,7 +150,7 @@ const characters = [
   const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     form: document.getElementById("submit"),
-    answer: document.getElementById("answer"), 
+    answer: 0, 
   }
 
   function insertimg(arr) {
@@ -221,8 +221,6 @@ function pick(arr) {
   return(hi);
 }  
 
-  pick(characters);
-
 function clearcards() {
   DOMSelectors.container.textContent = "";
  };
@@ -235,16 +233,20 @@ function clearcards() {
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
+  DOMSelectors.answer = documsent.getElementById("answer")
   DOMSelectors.answer.addEventListener("click", function () {
     document.getElementById("answer").addEventListener("click", function(arr) {
-      clearcards();
-      if (arr.num == wait[0]) {
+      if (arr.id == wait[0]) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
+        DOMSelectors.answer = document.getElementById("hello")
+        clearcards();
       }
-      else if (arr.num != wait[0]) {
+      else if (arr.id != wait[0]) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log("no")
+        DOMSelectors.answer = document.getElementById("hello")
+        clearcards();
       }
     })})
 })
