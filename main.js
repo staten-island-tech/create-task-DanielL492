@@ -199,6 +199,8 @@ console.log("This is" + new1.name)
  let history = [];
 let wait = [];
 
+let hi = 0;
+
 function pick(arr) {
   let randtext = getRandomInt(1, 36)
   let rand2 = getRandomInt(1, 36)
@@ -217,7 +219,7 @@ function pick(arr) {
   insertimg(newarr3)
   history.push(newarr3);
   console.log(history);
-  let hi = newtext.num;
+  hi = newtext.num;
   return(hi);
 }  
 
@@ -233,16 +235,17 @@ function clearcards() {
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
-  DOMSelectors.answer = documsent.getElementById("answer")
+  DOMSelectors.answer = document.getElementById("answer")
   DOMSelectors.answer.addEventListener("click", function () {
     document.getElementById("answer").addEventListener("click", function(arr) {
-      if (arr.id == wait[0]) {
+      if (arr.id == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
         DOMSelectors.answer = document.getElementById("hello")
+        console.log(arr.id)
         clearcards();
       }
-      else if (arr.id != wait[0]) {
+      else if (arr.id != hi) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log("no")
         DOMSelectors.answer = document.getElementById("hello")
