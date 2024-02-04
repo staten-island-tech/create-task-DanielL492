@@ -248,7 +248,3 @@ function clearcards() {
       }
     /*})})*/})})
 })
-
-
-
-//console.log(hi)
