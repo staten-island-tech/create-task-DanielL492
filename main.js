@@ -168,8 +168,8 @@ function inserttext(arr) {
   console.log(arr);
   /*arr.forEach((arr) =>*/ DOMSelectors.container.insertAdjacentHTML("beforeend",
   `<div class="flexcontainer">
-  <div class="card" id="${arr.num}">
-  <h6 class="name">${arr.name}</h6>
+  <div class="card1" id="${arr.num}">
+  <h3 class="name">${arr.name}</h6>
   </div>
   </div>`)
   return arr;

@@ -15,6 +15,7 @@
     height: 60vh;
     font-size: 1rem;
     border-radius: 15px;
+    padding-top:3vh;
     padding-bottom: 3vh;
     margin: 7.5vh;
     box-shadow: 10px 10px;
@@ -25,4 +26,18 @@
     width: 50%;
     height: 55%;
    }
+
+.card1 {
+    background-color: rgba(241, 110, 110, 0.774);
+    width: 10vw;
+    height: 10vh;
+    padding: 5vh;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#hello {
+    text-align: center;
+    margin-top: 5vh;
+}
    
