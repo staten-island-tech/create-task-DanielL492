@@ -214,7 +214,8 @@ function pick(arr) {
   //let newarr33 = newarr3.filter((newarr3.num) == rand3);
   insertimg(newarr3)
   history.push(newarr3);
-  console.log(history);
+  console.log(history)
+  history.splice(0, history.length);
   hi = newtext.num;
   return(hi);
 }  
