@@ -159,7 +159,7 @@ const characters = [
     `<div class="flexcontainer">
       <div class="card" id="${arr.num}">
         <img src="${arr.img}" alt="Image of ${arr.name}" class="card-img"/> <br>
-        <button type="button" id="answer">Answer</button>
+        <button type="button" class="answer" id="${arr.num}" >Answer</button>
       </div>
     </div>`
   )}
@@ -180,10 +180,6 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); 
 }
-
-const randtext = getRandomInt(1, 36)
-const new1 = characters[randtext];
-console.log("This is" + new1.name)
 
 /*function ifyiauf () {
   let randtext = getRandomInt(1, 36)
@@ -235,24 +231,24 @@ function clearcards() {
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
-  DOMSelectors.answer = document.getElementById("answer")
+  DOMSelectors.answer = document.querySelectorAll(".answer")
   console.log(DOMSelectors.answer)
-  DOMSelectors.answer.addEventListener("click", function () {
-    document.getElementById("answer").addEventListener("click", function(arr) {
-      if (/*(INSERT PARENT ID OF THE BUTTON HERE)*/arr.num == hi) {
+  DOMSelectors.answer.forEach((btn) => {btn.addEventListener("click", function (arr) {
+    //document.getElementById("answer").addEventListener("click", function(arr) {
+      if (/*(INSERT PARENT ID OF THE BUTTON HERE)*/arr.id == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
         DOMSelectors.answer = document.getElementById("hello")
         console.log(arr.id)
         clearcards();
       }
-      else if (/*INSERT PARENT ID OF THE BUTTON HERE*/ arr.num != hi) {
+      else if (/*INSERT PARENT ID OF THE BUTTON HERE*/ arr.id != hi) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log("no")
         DOMSelectors.answer = document.getElementById("hello")
         clearcards();
       }
-    })})
+    /*})})*/})})
 })
 
 
