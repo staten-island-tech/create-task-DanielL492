@@ -199,21 +199,27 @@ let hi = 0;
 
 function pick(arr) {
   let randtext = getRandomInt(1, 36)
-  let rand2 = getRandomInt(1, 36)
-  let rand3 = getRandomInt(1, 36)
+  let rand2 = getRandomInt(1, 36);
+  let rand3 = getRandomInt(1, 36);
   let newtext = arr[randtext];
   //let newtex = newtext.filter((newtext.num) == randtext);
   inserttext(newtext)
   insertimg(newtext)
-  history.push(newtext.name);
+  history.push(randtext);
+  while (history.includes(rand2)) {
+    rand2 = getRandomInt(1, 36);
+  }
+  history.push(rand2)
   let newarr2 = arr[rand2];
   //let newarr22 = newarr2.filter((newarr2.num) == rand2);
   insertimg(newarr2)
-  history.push(newarr2.name)
+  while (history.includes(rand3)) {
+    rand3 = getRandomInt(1, 36);
+  }
+  history.push(rand3);
   let newarr3 = arr[rand3];
   //let newarr33 = newarr3.filter((newarr3.num) == rand3);
   insertimg(newarr3)
-  history.push(newarr3);
   console.log(history)
   history.splice(0, history.length);
   hi = newtext.num;
