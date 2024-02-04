@@ -201,28 +201,30 @@ function pick(arr) {
   let randtext = getRandomInt(1, 36)
   let rand2 = getRandomInt(1, 36);
   let rand3 = getRandomInt(1, 36);
-  let newtext = arr[randtext];
-  //let newtex = newtext.filter((newtext.num) == randtext);
-  inserttext(newtext)
-  insertimg(newtext)
+  let rand1 = arr[randtext];
+  insertimg(rand1)
+  wait.push(rand1)
   history.push(randtext);
   while (history.includes(rand2)) {
     rand2 = getRandomInt(1, 36);
   }
   history.push(rand2)
   let newarr2 = arr[rand2];
-  //let newarr22 = newarr2.filter((newarr2.num) == rand2);
+  wait.push(newarr2)
   insertimg(newarr2)
   while (history.includes(rand3)) {
     rand3 = getRandomInt(1, 36);
   }
   history.push(rand3);
   let newarr3 = arr[rand3];
-  //let newarr33 = newarr3.filter((newarr3.num) == rand3);
   insertimg(newarr3)
+  wait.push(newarr3)
   console.log(history)
-  history.splice(0, history.length);
+  let newtext = wait[getRandomInt(0, wait.length)];
+  inserttext(newtext)
   hi = newtext.num;
+  history.splice(0, history.length);
+  wait.splice(0, wait.length);
   return(hi);
 }  
 
