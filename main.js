@@ -194,8 +194,8 @@ function getRandomInt(min, max) {
 
 let history = [];
 let wait = [];
-
 let hi = 0;
+let hi3 = 0;
 
 function pick(arr) {
   let randtext = getRandomInt(1, 36)
@@ -232,23 +232,32 @@ function clearcards() {
   DOMSelectors.container.textContent = "";
  };
 
+ let hi2 = 0;
+
+ function selectedProduct(event){
+  let target = event.target;
+  let parent = target.parentElement;//parent of "target"
+  let hi2 = Number(parent.id);
+  console.log(hi2)
+  return(hi2);
+}
+
  DOMSelectors.form.addEventListener("click", function (){
-  //event.preventDefault();
   clearcards();
   document.querySelector('#h33').textContent = " "
   pick(characters);
+  console.log(hi)
   DOMSelectors.answer = document.querySelectorAll(".answer")
   console.log(DOMSelectors.answer)
   DOMSelectors.answer.forEach((btn) => {btn.addEventListener("click", function (arr) {
     //document.getElementById("answer").addEventListener("click", function(arr) {
-      if (/*(INSERT PARENT ID OF THE BUTTON HERE)*/arr.id == hi) {
+    if (document.getElementById(selectedProduct(arr)) == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
         DOMSelectors.answer = document.getElementById("hello")
-        console.log(arr.id)
         clearcards();
       }
-      else if (/*INSERT PARENT ID OF THE BUTTON HERE*/ arr.id != hi) {
+      else if (document.getElementById(selectedProduct(arr)) != hi) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log("no")
         DOMSelectors.answer = document.getElementById("hello")
