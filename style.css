@@ -12,7 +12,7 @@
     flex-direction: column;
     background-color: rgba(110, 110, 241, 0.774);
     width: 15vw;
-    height: 60vh;
+    height: 43vh;
     font-size: 1rem;
     border-radius: 15px;
     padding-top:3vh;
@@ -24,7 +24,7 @@
    .card-img {
     align-items: center;
     width: 50%;
-    height: 55%;
+    height: 65%;
    }
 
 .card1 {
@@ -78,4 +78,12 @@ body {
   background-image: url(https://i.redd.it/3gowsmrp7nk71.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#h33 {
+  text-align: center;
+  background-color: rgba(218, 165, 32, 0.705);
+  border-radius: 8px;
+  margin-left:40%;
+  margin-right:40%;
 }

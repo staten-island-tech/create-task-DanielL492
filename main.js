@@ -184,7 +184,6 @@ function getRandomInt(min, max) {
 let history = [];
 let wait = [];
 let hi = 0;
-let hi3 = 0;
 
 function pick(arr) {
   let randtext = getRandomInt(1, 36)
