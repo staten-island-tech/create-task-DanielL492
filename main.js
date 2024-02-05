@@ -252,6 +252,7 @@ function clearcards() {
   DOMSelectors.answer.forEach((btn) => btn.addEventListener("click", function (arr) {
     //document.getElementById("answer").addEventListener("click", function(arr) {
     hi2 = document.getElementById(selectedProduct(arr));
+    console.log(hi2)
     if (hi2 == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
