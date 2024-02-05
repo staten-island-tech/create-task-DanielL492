@@ -166,7 +166,7 @@ const characters = [
 
 function inserttext(arr) {
   console.log(arr);
-  /*arr.forEach((arr) =>*/ DOMSelectors.container.insertAdjacentHTML("beforeend",
+  DOMSelectors.container.insertAdjacentHTML("beforeend",
   `<div class="flexcontainer">
   <div class="card1" id="${arr.num}">
   <h3 class="name">${arr.name}</h6>
@@ -180,17 +180,6 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); 
 }
-
-/*function ifyiauf () {
-  let randtext = getRandomInt(1, 36)
-  let newtext = characters.filter((arr) => arr.num == randtext);
-  const hi = newtext
-  return (hi);
-  //let newarr2 = characters.filter((arr) => arr.num == rand2);
-  // let newarr3 = characters.filter((arr) => arr.num == rand3);
-  //let rand2 = getRandomInt(1, 36)
-  //let rand3 = getRandomInt(1, 36)
- }*/
 
 let history = [];
 let wait = [];
@@ -250,22 +239,17 @@ function clearcards() {
   DOMSelectors.answer = document.querySelectorAll(".answer")
   console.log(DOMSelectors.answer)
   DOMSelectors.answer.forEach((btn) => btn.addEventListener("click", function (arr) {
-    //document.getElementById("answer").addEventListener("click", function(arr) {
-    hi2 = document.getElementById(selectedProduct(arr));
-    console.log(hi)
-    console.log(hi2)
-    if (hi2 == hi) {
+    if (selectedProduct(arr) == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
         DOMSelectors.answer = document.getElementById("hello")
         clearcards();
       }
-      else if (hi2 != hi) {
+      else if (selectedProduct(arr) != hi) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
         console.log(hi2);
         console.log("no")
         DOMSelectors.answer = document.getElementById("hello")
         clearcards();
-      }
-    /*})})*/}))
+      }}))
 })
