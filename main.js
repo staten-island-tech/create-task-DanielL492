@@ -234,8 +234,8 @@ function clearcards() {
 
  let hi2 = 0;
 
- function selectedProduct(event){
-  let target = event.target;
+ function selectedProduct(arr){
+  let target = arr.target;
   let parent = target.parentElement;//parent of "target"
   let hi2 = Number(parent.id);
   console.log(hi2)
@@ -252,6 +252,7 @@ function clearcards() {
   DOMSelectors.answer.forEach((btn) => btn.addEventListener("click", function (arr) {
     //document.getElementById("answer").addEventListener("click", function(arr) {
     hi2 = document.getElementById(selectedProduct(arr));
+    console.log(hi)
     console.log(hi2)
     if (hi2 == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
