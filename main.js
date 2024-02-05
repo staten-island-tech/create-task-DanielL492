@@ -249,19 +249,21 @@ function clearcards() {
   console.log(hi)
   DOMSelectors.answer = document.querySelectorAll(".answer")
   console.log(DOMSelectors.answer)
-  DOMSelectors.answer.forEach((btn) => {btn.addEventListener("click", function (arr) {
+  DOMSelectors.answer.forEach((btn) => btn.addEventListener("click", function (arr) {
     //document.getElementById("answer").addEventListener("click", function(arr) {
-    if (document.getElementById(selectedProduct(arr)) == hi) {
+    hi2 = document.getElementById(selectedProduct(arr));
+    if (hi2 == hi) {
         document.querySelector('#h33').textContent = "Yes, you got that correct!"
         console.log("hi")
         DOMSelectors.answer = document.getElementById("hello")
         clearcards();
       }
-      else if (document.getElementById(selectedProduct(arr)) != hi) {
+      else if (hi2 != hi) {
         document.querySelector('#h33').textContent = "Wrong. Get better."
+        console.log(hi2);
         console.log("no")
         DOMSelectors.answer = document.getElementById("hello")
         clearcards();
       }
-    /*})})*/})})
+    /*})})*/}))
 })
